@@ -29,7 +29,7 @@ defmodule PantryEx do
   defp parse_response(response) do
     case response do
       {:ok, %HTTPoison.Response{status_code: 200, body: body}} -> {:ok, body} |> decode_json()
-      {:ok, %HTTPoison.Response{status_code: 400, body: body}} -> {:error, body}
+      {:ok, %HTTPoison.Response{body: body}} -> {:error, body}
       {:error, %HTTPoison.Error{reason: reason}} -> {:error, reason}
     end
   end
