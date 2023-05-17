@@ -21,7 +21,7 @@ defmodule PantryEx.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:httpoison, "~> 1.8"},
+      {:httpoison, "~> 2.1.0"},
       {:poison, "~> 5.0"},
       {:exjsx, "~> 4.0"},
       {:ex_doc, "~> 0.27", only: :dev, runtime: false}
